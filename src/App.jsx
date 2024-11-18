@@ -13,6 +13,8 @@ import TrainingsList from "./components/TrainingsList";
 import CustomersList from "./components/CustomersList";
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
+import CalendarPage from './components/Calendar';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 function App() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -60,6 +62,10 @@ function App() {
                 <DirectionsRunIcon sx={{ mr: 1 }} />
                 Trainings
               </MenuItem>
+              <MenuItem component={Link} to="/calendar" onClick={handleClose}>
+                <CalendarMonthIcon sx={{ mr: 1 }} />
+                Calendar
+              </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
@@ -68,6 +74,7 @@ function App() {
           <Route path="" element={<CustomersList />} />
           <Route path="/customers" element={<CustomersList />} />
           <Route path="/trainings" element={<TrainingsList />} />
+          <Route path="/calendar" element={<CalendarPage />} />
         </Routes>
       </Box>
     </Router>

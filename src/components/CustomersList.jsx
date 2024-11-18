@@ -7,10 +7,13 @@ import AddCustomer from './AddCustomer';
 import EditCustomer from './EditCustomer';
 
 import DeleteIcon from '@mui/icons-material/Delete';
+import DownloadIcon from '@mui/icons-material/Download';
 
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-material.css";
+
 import Box from "@mui/material/Box";
+import { saveAs } from 'file-saver';
 
 
 function CustomersList() {
@@ -57,11 +60,35 @@ function CustomersList() {
         }
     }
 
+    const exportToCSV = () => {
+        const csvRows = [
+            ['First Name', 'Last Name', 'Email', 'Phone', 'Streetaddress', 'Postcode', 'City'],
+            ...customers.map(c => [
+                c.firstname,
+                c.lastname,
+                c.email,
+                c.phone,
+                c.streetaddress,
+                c.postcode,
+                c.city
+            ]),
+        ];
+
+        const csvContent = csvRows.map(row => row.join(',')).join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        saveAs(blob, 'Customers.csv');
+    };
+
+
+
     return (
         <>
             <Box sx={{ flex: 1, display: "flex", flexDirection: "column", height: "100%" }} />
             <Box sx={{ padding: 2, display: "flex", justifyContent: "flex-start" }}>
                 <AddCustomer handleFetch={handleFetch} />
+                <Button variant="contained" color="primary" onClick={exportToCSV} style={{ marginLeft: 16 }} startIcon={<DownloadIcon />}>
+                    Export
+                </Button>
             </Box>
 
             <div

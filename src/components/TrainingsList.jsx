@@ -67,7 +67,6 @@ function TrainingsList() {
 
     return (
         <>
-
             <div
                 className="ag-theme-material"
                 style={{
