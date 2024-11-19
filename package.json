@@ -18,11 +18,13 @@
     "@fullcalendar/timegrid": "^6.1.15",
     "@mui/icons-material": "^6.1.7",
     "@mui/material": "^6.1.7",
+    "@mui/x-date-pickers": "^7.22.2",
     "@toolpad/core": "^0.9.0",
     "ag-grid-react": "^32.3.3",
     "dayjs": "^1.11.13",
     "file-saver": "^2.0.5",
     "json2csv": "^6.0.0-alpha.2",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"

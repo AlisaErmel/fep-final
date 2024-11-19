@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import AddCustomer from './AddCustomer';
 import EditCustomer from './EditCustomer';
+import AddTraining from './AddTraining'
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -27,8 +28,12 @@ function CustomersList() {
         { field: "email", filter: true, sortable: true, width: 200 },
         { field: "phone", filter: true, sortable: true, width: 200 },
         { field: "streetaddress", filter: true, sortable: true, width: 200 },
-        { field: "postcode", filter: true, sortable: true, width: 200 },
-        { field: "city", filter: true, sortable: true, width: 200 },
+        { field: "postcode", filter: true, sortable: true, width: 150 },
+        { field: "city", filter: true, sortable: true, width: 150 },
+        {
+            cellRenderer: params => <AddTraining handleFetch={handleFetch} customer={params.data} />,
+            width: 112
+        },
         {
             cellRenderer: params => <EditCustomer handleFetch={handleFetch} data={params.data} />,
             width: 100

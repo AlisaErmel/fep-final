@@ -19,11 +19,11 @@ export function deleteCustomer(url) {
         })
 }
 
-export function saveCustomer(newCar) {
+export function saveCustomer(newCustomer) {
     return fetch(import.meta.env.VITE_API_URL, {
         method: "POST",
         headers: { "Content-type": "application/json" },
-        body: JSON.stringify(newCar)
+        body: JSON.stringify(newCustomer)
     })
         .then(response => {
             if (!response.ok)
@@ -33,11 +33,11 @@ export function saveCustomer(newCar) {
         })
 }
 
-export function updateCustomer(url, updatedCar) {
+export function updateCustomer(url, updatedCustomer) {
     return fetch(url, {
         method: "PUT",
         headers: { "Content-type": "application/json" },
-        body: JSON.stringify(updatedCar)
+        body: JSON.stringify(updatedCustomer)
     })
         .then(response => {
             if (!response.ok)
