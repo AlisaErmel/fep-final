@@ -61,7 +61,7 @@ export default function EditCar(props) {
                 open={open}
                 onClose={handleClose}
             >
-                <DialogTitle>Update Car</DialogTitle>
+                <DialogTitle>Update Customer</DialogTitle>
                 <DialogContent>
                     <TextField
                         margin="dense"
