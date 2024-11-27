@@ -15,6 +15,8 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import CalendarPage from './components/Calendar';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Statistics from './components/Statistics';
+import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';;
 
 function App() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -66,6 +68,10 @@ function App() {
                 <CalendarMonthIcon sx={{ mr: 1 }} />
                 Calendar
               </MenuItem>
+              <MenuItem component={Link} to="/statistics" onClick={handleClose}>
+                <InsertChartOutlinedIcon sx={{ mr: 1 }} />
+                Statistics
+              </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
@@ -75,6 +81,7 @@ function App() {
           <Route path="/customers" element={<CustomersList />} />
           <Route path="/trainings" element={<TrainingsList />} />
           <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/statistics" element={<Statistics />} />
         </Routes>
       </Box>
     </Router>
