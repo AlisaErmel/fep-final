@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    "homepage" : "https://alisaermel.github.io/fep-final/"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
