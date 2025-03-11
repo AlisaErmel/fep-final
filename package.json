@@ -1,7 +1,7 @@
 {
   "name": "final",
-  "private": true,
   "homepage" : "https://alisaermel.github.io/fep-final/",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
