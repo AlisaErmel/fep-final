@@ -81,7 +81,7 @@ function App() {
           <Route path="/customers" element={<CustomersList />} />
           <Route path="/trainings" element={<TrainingsList />} />
           <Route path="/calendar" element={<CalendarPage />} />
-          <Route path="/statistic" element={<Statistics />} />
+          <Route path="/statistics" element={<Statistics />} />
         </Routes>
       </Box>
     </Router>
